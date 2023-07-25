@@ -80,6 +80,14 @@ bool handleFormatChar(va_list *args, int *sum, int *i)
 bool handleFormatString(va_list *args, int *sum, int *i)
 {
 	char *x = va_arg(*args, char *);
+
+	if (x == NULL)
+	{
+		_puts("(null)");
+		(*i) += 2;
+		return (true);
+	}
+
 	(*sum) += _puts(x);
 	(*i) += 2;
 	return (true);
