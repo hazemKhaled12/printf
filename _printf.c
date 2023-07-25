@@ -13,6 +13,7 @@ int _printf(const char *format, ...)
 	int sum = 0;
 	int i = 0;
 	va_list args;
+	bool ran;
 
 	va_start(args, format);
 
@@ -28,7 +29,7 @@ int _printf(const char *format, ...)
 			i++;
 			continue;
 		}
-		bool ran = handleFormat(format, &sum, &i, &args);
+		ran = handleFormat(format, &sum, &i, &args);
 
 		if (ran)
 			continue;

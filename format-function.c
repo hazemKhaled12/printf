@@ -11,7 +11,7 @@
  * Return: Printed chars.
  */
 
-bool handleFormat(char *format, int *sum, int *i, va_list *args)
+bool handleFormat(const char *format, int *sum, int *i, va_list *args)
 {
 	if (format[*i + 1] == '%')
 	{
@@ -39,10 +39,10 @@ bool handleFormat(char *format, int *sum, int *i, va_list *args)
  * Return: Printed chars.
  */
 
-bool handleFormatPersion(char *format, int *sum, int *i)
+bool handleFormatPersion(const char *format, int *sum, int *i)
 {
 	_putchar(format[*i + 1]);
-	*sum++;
+	*sum += 1;
 	*i += 2;
 	return (true);
 }
@@ -62,7 +62,7 @@ bool handleFormatChar(va_list *args, int *sum, int *i)
 	int x = va_arg(*args, int);
 
 	_putchar(x);
-	++*sum;
+	*sum += 1;
 	*i += 2;
 	return (true);
 }
