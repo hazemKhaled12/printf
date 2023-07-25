@@ -11,7 +11,7 @@
  * Return: Printed chars.
  */
 
-void handleFormat(char *format, int *sum, int *i, va_list *args)
+void handleFormat(const char *format, int *sum, int *i, va_list *args)
 {
 	if (format[*i + 1] == '%')
 	{
@@ -41,7 +41,7 @@ void handleFormat(char *format, int *sum, int *i, va_list *args)
  * Return: Printed chars.
  */
 
-void handleFormatPersion(char *format, int *sum, int *i)
+void handleFormatPersion(const char *format, int *sum, int *i)
 {
 	_putchar(format[*i + 1]);
 	*sum++;
