@@ -24,14 +24,18 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			_putchar(format[i]);
-			sum++;
+			sum += _putchar(format[i]);
 			i++;
 			continue;
 		}
-		handleFormat(format, &sum, &i, &args);
+		bool ran = handleFormat(format, &sum, &i, &args);
+
+		if (ran)
+			continue;
+		sum += _putchar(format[i]);
+		i++;
+		continue;
 	}
 	va_end(args);
-
 	return (sum);
 }
