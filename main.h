@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <limits.h>
+#include <stdbool.h>
 
 int _printf(const char *format, ...);
 int _putchar(char c);
