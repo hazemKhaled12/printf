@@ -33,8 +33,8 @@ int _printf(const char *format, ...)
 
 		if (ran)
 			continue;
-		sum += _putchar(format[i + 1]);
-		i += 2;
+		sum += _putchar(format[i]);
+		i++;
 		continue;
 	}
 	va_end(args);
