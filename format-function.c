@@ -44,7 +44,7 @@ void handleFormat(const char *format, int *sum, int *i, va_list *args)
 void handleFormatPersion(const char *format, int *sum, int *i)
 {
 	_putchar(format[*i + 1]);
-	*sum++;
+	*sum = *sum+1;
 	*i += 2;
 }
 
