@@ -45,17 +45,18 @@ int _printInt(int num)
 	bool negative = false;
 	int i = 0;
 	int j;
+	long int numN = (long)num;
 
-	if (num < 0)
+	if (numN < 0)
 	{
 		negative = true;
-		num = -num;
+		numN = -numN;
 	}
 	do {
-		buffer[i] = num % 10 + '0';
-		num /= 10;
+		buffer[i] = numN % 10 + '0';
+		numN /= 10;
 		i++;
-	} while (num > 0);
+	} while (numN > 0);
 
 	if (negative)
 	{
