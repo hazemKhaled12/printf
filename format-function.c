@@ -97,7 +97,7 @@ bool handleFormatString(va_list *args, int *sum, int *i)
 }
 
 /**
- * handleFormatChar - Printf function
+ * handleFormatInteger - Printf function
  *
  * @sum: sum
  * @i: iterator
