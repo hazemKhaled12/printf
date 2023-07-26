@@ -29,6 +29,10 @@ bool handleFormat(const char *format, int *sum, int *i, va_list *args)
 	{
 		return (handleFormatInteger(args, sum, i));
 	}
+	if (format[*i + 1] == 'b')
+	{
+		return (handleFormatIToB(args, sum, i));
+	}
 	return (false);
 }
 

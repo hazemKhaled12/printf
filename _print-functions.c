@@ -72,3 +72,25 @@ int _printInt(int num)
 
 	return (count);
 }
+
+/**
+ * _intToBinary - prints a string to stdout
+ * @num: pointer to the string to print
+ * Return: Return number of printed characters
+ */
+
+char *_intToBinary(unsigned int num)
+{
+	char *binary;
+	int i;
+
+	binary = malloc(sizeof(char) * (sizeof(int) * 8 + 1));
+	binary[sizeof(int) * 8] = '\0';
+	i = sizeof(int) * 8 - 1;
+	while (i >= 0)
+	{
+		binary[i--] = (num & 1) + '0';
+		num >>= 1;
+	}
+	return (binary);
+}
